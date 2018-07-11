@@ -13,18 +13,22 @@
 
         </activity>
         <activity android:name=".JavaActivity2">
-
         </activity>
         <activity android:name=".KotlinActivity1">
         </activity>
 
         <activity android:name=".KotlinActivity2"></activity>
         <activity android:name="LifeCycleTest">
+        </activity>
+        <activity android:name=".ServiceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service android:name=".ExampleService">
+
+        </service>
     </application>
 
 </manifest>

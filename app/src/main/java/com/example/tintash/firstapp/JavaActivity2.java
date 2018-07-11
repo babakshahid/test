@@ -5,11 +5,11 @@ import android.os.Bundle;
 import android.widget.TextView;
 import java.util.Random;
 
-public class JavaActivity2 extends AppCompatActivity {
+public class JavaActivity2 extends BaseClassActivity {
 
     private static final String TOTAL_COUNT = "total_count";
     int count = 0;
-    TextView Header_tv, Random_tv;
+    TextView tvHeader, tvRandom;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,16 +22,16 @@ public class JavaActivity2 extends AppCompatActivity {
         }
 
         // Display the random number.
-        Random_tv.setText(Integer.toString(randomInt));
+        tvRandom.setText(Integer.toString(randomInt));
 
         // Substitute the max value into the string resource
         // for the heading, and update the heading
-        Header_tv.setText(getString(R.string.header, count));
+        tvHeader.setText(getString(R.string.header, count));
     }
 
     private void setter() {
-        Header_tv = findViewById(R.id.header);
-        Random_tv = findViewById(R.id.random);
+        tvHeader = findViewById(R.id.header);
+        tvRandom = findViewById(R.id.random);
     }
 
     private void init() {

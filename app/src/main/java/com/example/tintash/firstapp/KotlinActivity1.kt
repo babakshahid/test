@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_test_java1.*
 
-class KotlinActivity1 : AppCompatActivity() {
+class KotlinActivity1 : BaseClassActivity() {
 
     var count_int = 0
     lateinit var context: Context

@@ -5,7 +5,7 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_test_java2.*
 import java.util.*
 
-class KotlinActivity2 : AppCompatActivity() {
+class KotlinActivity2 : BaseClassActivity() {
 
     val TOTAL_COUNT = "total"
     var count = 0
