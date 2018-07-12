@@ -12,7 +12,6 @@ public class JavaActivity1 extends BaseClassActivity implements View.OnClickList
     Button toast, count, random;
     TextView tvCount;
     int countInt = 0;
-    private static final String TOTAL_COUNT = "total_count";
     Context context;
 
     @Override
@@ -57,7 +56,7 @@ public class JavaActivity1 extends BaseClassActivity implements View.OnClickList
 
     private void startNewActivity() {
         Intent newIntent = new Intent(context,JavaActivity2.class);
-        newIntent.putExtra(TOTAL_COUNT,countInt);
+        newIntent.putExtra(Constants.ACTION.TOTAL_COUNT,countInt);
         startActivity(newIntent);
     }
 

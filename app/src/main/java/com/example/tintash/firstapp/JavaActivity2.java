@@ -7,7 +7,6 @@ import java.util.Random;
 
 public class JavaActivity2 extends BaseClassActivity {
 
-    private static final String TOTAL_COUNT = "total_count";
     int count = 0;
     TextView tvHeader, tvRandom;
     @Override
@@ -35,6 +34,6 @@ public class JavaActivity2 extends BaseClassActivity {
     }
 
     private void init() {
-        count = getIntent().getIntExtra(TOTAL_COUNT,0);
+        count = getIntent().getIntExtra(Constants.ACTION.TOTAL_COUNT,0);
     }
 }

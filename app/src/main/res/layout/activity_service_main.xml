@@ -3,11 +3,22 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/tv_bk_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
+        android:textSize="25dp"
+        android:text="BackGround Service" />
+
     <Button
         android:id="@+id/btn_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_alignTop="@id/tv_bk_service"
+        android:layout_alignParentLeft="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="74dp"
         android:text="Start Service" />
@@ -16,17 +27,45 @@
         android:id="@+id/btn_stop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btn_start"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
         android:text="Stop Service" />
 
     <Button
         android:id="@+id/btn_next"
+        android:layout_width="127dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/btn_start"
+        android:text="Next Page" />
+
+    <TextView
+        android:id="@+id/tv_for_service"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="63dp"
-        android:text="Next Page" />
+        android:layout_centerVertical="true"
+        android:textSize="25dp"
+        android:text="ForeGround Service" />
+
+    <Button
+        android:id="@+id/btn_for_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_for_service"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="74dp"
+        android:layout_marginLeft="35dp"
+        android:text="Start Service" />
+
+    <Button
+        android:id="@+id/btn_for_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btn_for_start"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="35dp"
+        android:text="Stop Service" />
 
 </android.widget.RelativeLayout>

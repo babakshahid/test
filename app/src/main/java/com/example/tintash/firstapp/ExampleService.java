@@ -27,10 +27,6 @@ public class ExampleService extends Service{
         myPlayer.setLooping(false);
     }
 
-    @Override
-    public void onStart(Intent intent, int startid) {
-
-    }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {

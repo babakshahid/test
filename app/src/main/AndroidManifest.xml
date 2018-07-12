@@ -29,6 +29,10 @@
         <service android:name=".ExampleService">
 
         </service>
+
+        <service android:name=".ExampleForegroundService">
+
+        </service>
     </application>
 
 </manifest>
