@@ -21,18 +21,17 @@
         <activity android:name="LifeCycleTest">
         </activity>
         <activity android:name=".ServiceActivity">
+
+        </activity>
+        <activity android:name=".BroadcastActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".ExampleService">
+        <service android:name=".ExampleService" />
 
-        </service>
-
-        <service android:name=".ExampleForegroundService">
-
-        </service>
+        <service android:name=".ExampleForegroundService" />
     </application>
 
 </manifest>

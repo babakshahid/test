@@ -9,6 +9,8 @@ public class Constants {
         public static String NEXT_ACTION = "com.example.tintash.firstapp.action.next";
         public static String STARTFOREGROUND_ACTION = "com.example.tintash.firstapp.action.startforeground";
         public static String STOPFOREGROUND_ACTION = "com.example.tintash.firstapp.action.stopforeground";
+        public static String GLOBAL_BROADCAST_INTENT = "com.example.tintash.firestapp.action.globalintent";
+        public static String LOCAL_BROADCAST_INTENT = "com.example.tintash.firestapp.action.localintent";
         public static String TOTAL_COUNT = "total_count";
     }
     public interface NOTIFICATION_ID {
