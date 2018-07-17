@@ -5,4 +5,22 @@
     <string name="btn_toast">Toast</string>
     <string name="tv_count">0</string>
     <string name="header">Here is a random number between 0 and %d</string>
+
+    <array name="animals">
+        <item>Cat</item>
+        <item>Lion</item>
+        <item>Dog</item>
+        <item>Goat</item>
+        <item>Lama</item>
+        <item>Tiger</item>
+    </array>
+
+    <array name="animal_Description">
+        <item>Cute animle</item>
+        <item>Scary Lion</item>
+        <item>Cute Dog</item>
+        <item>EatableGoat</item>
+        <item>Meme Famous Lama</item>
+        <item>Scary Tiger</item>
+    </array>
 </resources>

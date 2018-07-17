@@ -16,12 +16,12 @@ public class JavaActivity2 extends BaseClassActivity {
         init();
         setter();
         int randomInt = 0;
-        if (count>0) {
+        if (count > 0) {
             randomInt = new Random().nextInt(count);
         }
 
         // Display the random number.
-        tvRandom.setText(Integer.toString(randomInt));
+        tvRandom.setText(String.valueOf(randomInt));
 
         // Substitute the max value into the string resource
         // for the heading, and update the heading

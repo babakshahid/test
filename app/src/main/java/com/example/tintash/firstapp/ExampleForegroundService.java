@@ -42,24 +42,21 @@ public class ExampleForegroundService extends Service {
             PendingIntent ppreviousIntent = PendingIntent.getService(this, 0,
                     previousIntent, 0);
 
+            Intent nextIntent = new Intent(this, ExampleForegroundService.class);
+            nextIntent.setAction(Constants.ACTION.NEXT_ACTION);
+            PendingIntent pnextIntent = PendingIntent.getService(this, 0,
+                    nextIntent, 0);
+
             Intent playIntent = new Intent(this, ExampleForegroundService.class);
             playIntent.setAction(Constants.ACTION.PLAY_ACTION);
             PendingIntent pplayIntent = PendingIntent.getService(this, 0,
                     playIntent, 0);
 
             Intent pauseIntent = new Intent(this, ExampleForegroundService.class);
-            playIntent.setAction(Constants.ACTION.PAUSE_ACTION);
+            pauseIntent.setAction(Constants.ACTION.PAUSE_ACTION);
             PendingIntent ppauseIntent = PendingIntent.getService(this, 0,
-                    playIntent, 0);
+                    pauseIntent, 0);
 
-
-            Intent nextIntent = new Intent(this, ExampleForegroundService.class);
-            nextIntent.setAction(Constants.ACTION.NEXT_ACTION);
-            PendingIntent pnextIntent = PendingIntent.getService(this, 0,
-                    nextIntent, 0);
-
-            Bitmap icon = BitmapFactory.decodeResource(getResources(),
-                    R.drawable.ic_launcher_foreground);
 
             pause = new NotificationCompat.Builder(this)
                     .setContentTitle("Test Music Player")
@@ -110,17 +107,26 @@ public class ExampleForegroundService extends Service {
         }else if (intent.getAction().equals(
                 Constants.ACTION.STOPFOREGROUND_ACTION)) {
             Toast.makeText(this, "Forground Service Stoping", Toast.LENGTH_LONG).show();
+            myPlayer.stop();
             stopForeground(true);
             stopSelf();
         }
         return START_STICKY;
     }
 
-
+    @Override
+    public void onTaskRemoved(Intent rootIntent) {
+        Toast.makeText(this, "Service Stopped", Toast.LENGTH_LONG).show();
+        stopForeground(true);
+        myPlayer.stop();
+        super.onTaskRemoved(rootIntent);
+    }
 
     @Override
     public void onDestroy() {
         Toast.makeText(this, "Service Stopped", Toast.LENGTH_LONG).show();
+        stopForeground(true);
+        myPlayer.stop();
         super.onDestroy();
     }
 

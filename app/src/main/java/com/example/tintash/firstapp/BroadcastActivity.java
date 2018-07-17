@@ -1,7 +1,5 @@
 package com.example.tintash.firstapp;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
@@ -13,6 +11,7 @@ public class BroadcastActivity extends BaseClassActivity {
 
     LocalBroadcastManager localBroadcastManager;
     ExampleBroadcastReciever broadcastReciever;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +20,7 @@ public class BroadcastActivity extends BaseClassActivity {
     }
 
     public void init(){
-        broadcastReciever= new ExampleBroadcastReciever();
+        broadcastReciever = new ExampleBroadcastReciever();
         registerReceiver(broadcastReciever,
                 new IntentFilter(Constants.ACTION.GLOBAL_BROADCAST_INTENT));
         localBroadcastManager = LocalBroadcastManager.getInstance(this);

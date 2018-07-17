@@ -9,9 +9,10 @@ public class ExampleBroadcastReciever extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
+        if(intent.getAction() == null) return;
         if(intent.getAction().equals(Constants.ACTION.GLOBAL_BROADCAST_INTENT)) {
             Toast.makeText(context, "Global Broadcast Recieved", Toast.LENGTH_SHORT).show();
-        }else {
+        } else {
             Toast.makeText(context, "Local Broadcast Recieved", Toast.LENGTH_SHORT).show();
         }
     }

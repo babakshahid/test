@@ -23,7 +23,7 @@ public class ExampleService extends Service{
     public void onCreate() {
         Toast.makeText(this, "Service Created", Toast.LENGTH_LONG).show();
         Log.d("Service","onCreate");
-        myPlayer = MediaPlayer.create(this,R.raw.sample);
+        myPlayer = MediaPlayer.create(this, R.raw.sample);
         myPlayer.setLooping(false);
     }
 

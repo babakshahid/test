@@ -2,8 +2,6 @@ package com.example.tintash.firstapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.SyncStateContract;
-import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +9,7 @@ import android.widget.Toast;
 
 public class ServiceActivity extends BaseClassActivity implements View.OnClickListener {
 
-    Button btnStart, btnStop,btnNext, btnForStart, btnForStop;
+    Button btnStart, btnStop, btnNext, btnForStart, btnForStop;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +18,7 @@ public class ServiceActivity extends BaseClassActivity implements View.OnClickLi
         setter();
     }
 
-    protected void setter(){
+    protected void setter() {
         btnStart = findViewById(R.id.btn_start);
         btnNext = findViewById(R.id.btn_next);
         btnStop = findViewById(R.id.btn_stop);
@@ -38,7 +36,7 @@ public class ServiceActivity extends BaseClassActivity implements View.OnClickLi
     public void onClick(View v) {
         Log.d("Check101", String.valueOf(v.getId()));
         Log.d("Check101", String.valueOf(R.id.btn_for_start));
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btn_start:
                 startService(new Intent(this,
                         com.example.tintash.firstapp.ExampleService.class));
@@ -48,21 +46,21 @@ public class ServiceActivity extends BaseClassActivity implements View.OnClickLi
                         com.example.tintash.firstapp.ExampleService.class));
                 break;
             case R.id.btn_next:
-                startActivity(new Intent(this,LifeCycleTest.class));
+                startActivity(new Intent(this, LifeCycleTest.class));
                 break;
             case R.id.btn_for_start:
                 startService(new Intent(this,
                         com.example.tintash.firstapp.ExampleForegroundService.class).setAction(
-                                Constants.ACTION.STARTFOREGROUND_ACTION));
+                        Constants.ACTION.STARTFOREGROUND_ACTION));
                 break;
             case R.id.btn_for_stop:
                 stopService(new Intent(this,
                         com.example.tintash.firstapp.ExampleForegroundService.class).setAction(
-                                Constants.ACTION.STOPFOREGROUND_ACTION));
+                        Constants.ACTION.STOPFOREGROUND_ACTION));
                 break;
             default:
                 Toast toast = Toast.makeText(this,
-                        "Nothing is registered",Toast.LENGTH_SHORT);
+                        "Nothing is registered", Toast.LENGTH_SHORT);
                 toast.show();
         }
 

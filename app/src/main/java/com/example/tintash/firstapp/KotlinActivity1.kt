@@ -11,12 +11,14 @@ class KotlinActivity1 : BaseClassActivity() {
     var count_int = 0
     lateinit var context: Context
     val TOTAL_COUNT = "total"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test_java1)
         context = this
         setter()
     }
+
     fun setter(){
         count.setOnClickListener {
             count_int += 1

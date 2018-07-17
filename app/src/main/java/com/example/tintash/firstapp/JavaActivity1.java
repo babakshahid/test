@@ -37,6 +37,7 @@ public class JavaActivity1 extends BaseClassActivity implements View.OnClickList
         random.setOnClickListener(this);
         count.setOnClickListener(this);
     }
+
     @Override
     public void onClick(View view) {
         switch (view.getId()){
@@ -50,13 +51,13 @@ public class JavaActivity1 extends BaseClassActivity implements View.OnClickList
                 startNewActivity();
                 break;
             default:
-                showToast("No Action is registered",Toast.LENGTH_SHORT);
+                showToast("No Action is registered", Toast.LENGTH_SHORT);
         }
     }
 
     private void startNewActivity() {
-        Intent newIntent = new Intent(context,JavaActivity2.class);
-        newIntent.putExtra(Constants.ACTION.TOTAL_COUNT,countInt);
+        Intent newIntent = new Intent(context, JavaActivity2.class);
+        newIntent.putExtra(Constants.ACTION.TOTAL_COUNT, countInt);
         startActivity(newIntent);
     }
 
